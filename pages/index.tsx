@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { useQuery } from 'react-query';
-import { QueryCache } from 'react-query';
+import { useQuery, QueryCache } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 
 const fetchData = () => {
@@ -20,6 +19,7 @@ export async function getStaticProps() {
     },
   };
 }
+
 export default function Home() {
   const { data, isFetching } = useQuery('data', fetchData);
 

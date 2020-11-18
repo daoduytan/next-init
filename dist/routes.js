@@ -8,5 +8,5 @@ const next_routes_1 = __importDefault(require("next-routes"));
 exports.routes = new next_routes_1.default();
 exports.Router = exports.routes.Router;
 exports.Link = exports.routes.Link;
-exports.routes.add("confirm", "/user/confirm/:token");
+exports.routes.add('confirm', '/user/confirm/:token');
 //# sourceMappingURL=routes.js.map

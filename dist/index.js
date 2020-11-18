@@ -8,12 +8,12 @@ const express_1 = __importDefault(require("express"));
 const next_1 = __importDefault(require("next"));
 const routes_1 = require("./routes");
 const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = process.env.NODE_ENV !== "production";
+const dev = process.env.NODE_ENV !== 'production';
 const app = next_1.default({ dev });
 const handle = routes_1.routes.getRequestHandler(app);
 app.prepare().then(() => {
     const server = express_1.default();
-    server.all("*", (req, res) => {
+    server.all('*', (req, res) => {
         return handle(req, res);
     });
     server.listen(port, () => {
